@@ -17,5 +17,5 @@ export default defineNuxtConfig({
      */
     componentDir: './components/ui'
   },
-  devtools: { enabled: true },
+  devtools: { enabled: false },
 })
