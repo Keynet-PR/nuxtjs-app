@@ -18,4 +18,8 @@ export default defineNuxtConfig({
     componentDir: './components/ui'
   },
   devtools: { enabled: false },
+  server: {
+    host: "0.0.0.0",
+    port: process.env.APP_PORT || 3000,
+  },
 })
