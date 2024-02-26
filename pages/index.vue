@@ -3,19 +3,6 @@
     <Button>Click me</Button>
   </div>
   <div>
-    <DropdownMenu>
-      <DropdownMenuTrigger>Open</DropdownMenuTrigger>
-      <DropdownMenuContent>
-        <DropdownMenuLabel>My Account</DropdownMenuLabel>
-        <DropdownMenuSeparator />
-        <DropdownMenuItem>Profile</DropdownMenuItem>
-        <DropdownMenuItem>Billing</DropdownMenuItem>
-        <DropdownMenuItem>Team</DropdownMenuItem>
-        <DropdownMenuItem>Subscription</DropdownMenuItem>
-      </DropdownMenuContent>
-    </DropdownMenu>
-  </div>
-  <div>
     <AlertDialog>
       <AlertDialogTrigger as-child>
         <Button variant="outline">
@@ -73,7 +60,7 @@
       </DialogContent>
     </Dialog>
   </div>
-  <div>
+  <!-- <div>
     <h1>Color mode: {{ $colorMode.value }}</h1>
     <select v-model="$colorMode.preference">
       <option value="system">System</option>
@@ -81,13 +68,14 @@
       <option value="dark">Dark</option>
       <option value="sepia">Sepia</option>
     </select>
-  </div>
+  </div> -->
 </template>
 
 <script setup>
-const colorMode = useColorMode()
 
-console.log(colorMode.preference)
+// const colorMode = useColorMode()
+// console.log(colorMode.preference)
+
 </script>
 
 <style>
