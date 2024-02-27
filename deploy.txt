@@ -1,0 +1,32 @@
+
+npm install -g pnpm
+pnpm -v
+pnpm install
+nvm install --lts
+node -v
+npm install -g pnpm
+pnpm dev
+pnpm build
+pnpm add -g pm2
+pnpm add -d pm2
+add: package.js "start": "pm2 start -i max --name nuxtjsapp  .output/server/index.mjs"
+pnpm start
+source ~/.bashrc
+pnpm setup
+pnpm add -g pm2
+pm2 log
+pm2 list
+pm2 delete all
+pm2 status
+pm2 stop all
+pm2 restart -a nuxtjsapp
+pm2 startup
+npm list -g
+netstat -tln
+ mkdir -p /var/www/sso-auth
+ ---
+ ssh-keygen -t rsa
+  ssh-keygen -t rsa -b 4096
+  ls -ltr
+  ls -la
+  cat id_rsa
