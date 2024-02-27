@@ -30,3 +30,6 @@ netstat -tln
   ls -ltr
   ls -la
   cat id_rsa
+  --
+  chmod u+x /.scripts/deploy.sh
+  git update-index --add --chmod=+x deploy.sh
