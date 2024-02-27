@@ -6,9 +6,9 @@ git pull origin main
 
 echo "New change copied to server!."
 echo "Install depencies..."
-pnpm install --yes
+pnpm install
 echo "Creating Production build..."
 pnpm build
 echo "PM2 Reload"
-pm2 reload -a nuxtjsapp
+pm2 restart -a nuxtjsapp
 echo "Deploy completed..."
