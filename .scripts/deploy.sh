@@ -6,9 +6,9 @@ git pull origin main
 
 echo "New change copied to server!."
 echo "Install depencies..."
-yarn install --yes
+pnpm install --yes
 echo "Creating Production build..."
-yarn build
+pnpm build
 echo "PM2 Reload"
 pm2 reload -a nuxtjsapp
 echo "Deploy completed..."
