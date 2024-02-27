@@ -11,13 +11,13 @@
         >
           <span class="sr-only">{{ l.name }}</span>
           <Icon :name="l.icon" class="h-6 w-6 shrink-0" />
-          <div v-if="l.items" class="tooltip px-2">
+          <!-- <div v-if="l.items" class="tooltip px-2">
             <div v-for="sub in l.items" class="flex flex-col gap-4">
               <NuxtLink :to="sub.path" class="w-auto text-nowrap px-2 py-1">
                 {{ sub.name }}
               </NuxtLink>
             </div>
-          </div>
+          </div> -->
         </NuxtLink>
       </li>
     </template>

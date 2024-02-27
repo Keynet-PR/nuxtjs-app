@@ -5,7 +5,8 @@ export default defineNuxtConfig({
     "shadcn-nuxt",
     "@pinia/nuxt",
     "@nuxtjs/i18n",
-    "nuxt-icon"
+    "nuxt-icon",
+    '@vueuse/nuxt',
   ],
   tailwindcss: { exposeConfig: true },
   shadcn: {
@@ -51,5 +52,5 @@ export default defineNuxtConfig({
     // },
     preset: "node-server",
   },
-  devtools: { enabled: true },
+  devtools: { enabled: false },
 });

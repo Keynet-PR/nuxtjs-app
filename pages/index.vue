@@ -1,11 +1,11 @@
 <template>
   <section class="main-content">
-    <!-- <DashboardStatusCard />
+    <DashboardStatusCard />
     <DashboardAnalyticsChart />
-    <DashboardRecentLinks /> -->
+    <DashboardRecentLinks />
   </section>
-  <!-- Message list-->
-  <!-- <Threads /> -->
+  <!-- Threads list-->
+  <Threads />
 </template>
 
 <script lang="ts" setup>

@@ -76,3 +76,44 @@
     @apply bg-background text-foreground;
   }
 }
+.main-content {
+  @apply flex h-full min-w-0 flex-1 flex-col overflow-hidden xl:order-last;
+}
+.tooltip {
+  @apply invisible absolute left-full ml-6 -translate-x-3 rounded-sm border bg-white px-2 py-2 text-sm opacity-20 transition-all group-hover:visible group-hover:translate-x-0 group-hover:opacity-100 dark:bg-gray-900;
+}
+.order-tab > .active {
+  @apply bg-blue-500 text-white hover:text-white;
+}
+.main.active {
+  @apply md:ml-0 md:w-full;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+.dropzone {
+  @apply grid h-full w-full items-center justify-center border border-dashed text-gray-600;
+}
+
+.labels-enter-active,
+.labels-leave-active {
+  transition: all 0.2s ease;
+}
+
+.labels-enter-from,
+.labels-leave-to {
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+/* Tooltip styles */
+.v-popper__inner {
+  @apply text-xs;
+}
