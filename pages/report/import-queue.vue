@@ -1,9 +1,8 @@
 <script lang="ts" setup>
   import { storeToRefs } from "pinia";
   import MainContent from "~/components/report/main-content.vue";
-  import LineChart from "~/components/report/subscriber/line-chart.vue";
-  import StatusCard from "~/components/report/subscriber/status-card.vue";
-
+  import Table from "~/components/report/table.vue";
+  import { columns } from "@/components/report/messages/columns";
   const unsubscriberStore = useUnsubscriberStore();
 
   await watchEffect(() => unsubscriberStore.getItems());
@@ -12,10 +11,10 @@
 
   definePageMeta({
     middleware: ["auth"],
-    breadcrumb: "Subscribers",
+    breadcrumb: "import-queue",
   });
   useHead({
-    title: "Subscribers",
+    title: "import-queue",
   });
 </script>
 
@@ -23,8 +22,7 @@
   <section class="main-content">
     <MainContent>
       <div class="border">
-        <StatusCard />
-        <LineChart />
+        <Table :data="items" :columns="columns" />
       </div>
     </MainContent>
   </section>

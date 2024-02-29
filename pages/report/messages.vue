@@ -12,10 +12,10 @@
 
   definePageMeta({
     middleware: ["auth"],
-    breadcrumb: "Subscribers",
+    breadcrumb: "Messages",
   });
   useHead({
-    title: "Subscribers",
+    title: "Messages",
   });
 </script>
 

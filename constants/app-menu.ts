@@ -2,17 +2,17 @@ export const profileMenuOptions = [
   {
     name: "Profile",
     icon: "heroicons:question-mark-circle",
-    path: "/setting/profile",
+    path: "/settings/profile",
   },
   {
     name: "Billing",
     icon: "heroicons:currency-dollar",
-    path: "/setting/billing",
+    path: "/settings/billing",
   },
   {
     name: "Account",
     icon: "heroicons:cog-8-tooth",
-    path: "/setting/account",
+    path: "/settings/account",
   },
   { divider: true },
 ];
@@ -63,9 +63,9 @@ export const menu = [
     path: "/report/subscribers",
   },
   {
-    name: "setting",
+    name: "settings",
     icon: "heroicons:cog-8-tooth",
-    path: "/setting",
+    path: "/settings",
   },
   {
     id: "devices",
@@ -103,7 +103,7 @@ export const menu = [
       { name: "Roles", path: "/system/roles" },
       { name: "Sms Gateways", path: "/system/sms-gateways" },
       { name: "Subscribers", path: "/system/subscribers" },
-      { name: "setting", path: "/system/setting" },
+      { name: "settings", path: "/system/settings" },
       { name: "Domains", path: "/system/domains" },
       { name: "Redeem Codes", path: "/system/redeem-codes" },
       { name: "Subscription Plans", path: "/system/subscription-plans" },
@@ -116,27 +116,27 @@ export const menu = [
 export const sidebarNavItems = [
   {
     name: "Profile",
-    path: "/setting/profile",
+    path: "/settings/profile",
   },
   {
     name: "Account",
-    path: "/setting/account",
+    path: "/settings/account",
   },
   {
     name: "Billing",
-    path: "/setting/billing",
+    path: "/settings/billing",
   },
   {
     name: "Appearance",
-    path: "/setting/appearance",
+    path: "/settings/appearance",
   },
   {
     name: "Notifications",
-    path: "/setting/notifications",
+    path: "/settings/notifications",
   },
   {
     name: "Display",
-    path: "/setting/display-form",
+    path: "/settings/display-form",
   },
 ];
 
