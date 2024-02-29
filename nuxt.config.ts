@@ -17,6 +17,7 @@ export default defineNuxtConfig({
      */
     componentDir: "./components/ui",
   },
+  
   app: {
     head: {
       title: "smsgo",
@@ -25,8 +26,9 @@ export default defineNuxtConfig({
         { rel: "stylesheet", href: "https://rsms.me/inter/inter.css" },
         { rel: "preconnect", href: "https://rsms.me/" },
       ],
-    },
+    }   
   },
+
   i18n: {
     locales: [
       { code: "en", iso: "en-US", file: "en-US.json", name: "English" },
@@ -45,12 +47,15 @@ export default defineNuxtConfig({
     },
   },
   nitro: {
-    // routeRules: {
-    //   "/backend/**": {
-    //     proxy: "https://sso-auth-api.up.railway.app"
-    //   }
-    // },
+    routeRules: {
+      "/api/**": {
+        proxy: "http://localhost:8000"
+      }
+    },
     preset: "node-server",
+  },
+  devServer: {
+    port: 3000
   },
   devtools: { enabled: false },
 });

@@ -2,17 +2,17 @@ export const profileMenuOptions = [
   {
     name: "Profile",
     icon: "heroicons:question-mark-circle",
-    path: "/settings/profile",
+    path: "/setting/profile",
   },
   {
     name: "Billing",
     icon: "heroicons:currency-dollar",
-    path: "/settings/billing",
+    path: "/setting/billing",
   },
   {
     name: "Account",
     icon: "heroicons:cog-8-tooth",
-    path: "/settings/account",
+    path: "/setting/account",
   },
   { divider: true },
 ];
@@ -63,9 +63,9 @@ export const menu = [
     path: "/report/subscribers",
   },
   {
-    name: "Settings",
+    name: "setting",
     icon: "heroicons:cog-8-tooth",
-    path: "/settings",
+    path: "/setting",
   },
   {
     id: "devices",
@@ -103,27 +103,7 @@ export const menu = [
       { name: "Roles", path: "/system/roles" },
       { name: "Sms Gateways", path: "/system/sms-gateways" },
       { name: "Subscribers", path: "/system/subscribers" },
-      { name: "Settings", path: "/system/settings" },
-      { name: "Domains", path: "/system/domains" },
-      { name: "Redeem Codes", path: "/system/redeem-codes" },
-      { name: "Subscription Plans", path: "/system/subscription-plans" },
-      { name: "Subscriptions", path: "/system/subscriptions" },
-      { name: "Delivery Logs", path: "/system/delivery-logs" },
-    ],
-  },
-];
-
-export const bottonMenu = [
-  {
-    name: "System",
-    icon: "heroicons:circle-stack",
-    path: "/system/users",
-    slug: "system",
-    items: [
-      { name: "Users", path: "/system/users" },
-      { name: "Sms Gateways", path: "/system/sms-gateways" },
-      { name: "Subscribers", path: "/system/subscribers" },
-      { name: "Settings", path: "/system/settings" },
+      { name: "setting", path: "/system/setting" },
       { name: "Domains", path: "/system/domains" },
       { name: "Redeem Codes", path: "/system/redeem-codes" },
       { name: "Subscription Plans", path: "/system/subscription-plans" },
@@ -136,27 +116,27 @@ export const bottonMenu = [
 export const sidebarNavItems = [
   {
     name: "Profile",
-    path: "/settings/profile",
+    path: "/setting/profile",
   },
   {
     name: "Account",
-    path: "/settings/account",
+    path: "/setting/account",
   },
   {
     name: "Billing",
-    path: "/settings/billing",
+    path: "/setting/billing",
   },
   {
     name: "Appearance",
-    path: "/settings/appearance",
+    path: "/setting/appearance",
   },
   {
     name: "Notifications",
-    path: "/settings/notifications",
+    path: "/setting/notifications",
   },
   {
     name: "Display",
-    path: "/settings/display-form",
+    path: "/setting/display-form",
   },
 ];
 

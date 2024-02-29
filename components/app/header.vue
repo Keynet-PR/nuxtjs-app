@@ -106,6 +106,7 @@
     </div>
     <!-- Mobile menu, show/hide this `div` based on menu open/closed state -->
     <!-- <MobileMenu /> -->
+    
   </header>
 </template>
 <script lang="ts" setup>
