@@ -1,5 +1,15 @@
 import { string, z } from "zod";
 
+export const dashboardSchema = z.object({
+  countSentMessages: z.number(),
+  countPendingMessages: z.number(),
+  threads: z.object({}),
+  subscribers:z.object({}),
+  messages: z.object({}),
+  linkedNumbers: z.object({})
+});
+export type Dashboard = z.infer<typeof dashboardSchema>;
+
 export const groupSchema = z.object({
   id: z.number(),
   name: z.string(),
@@ -9,6 +19,7 @@ export const groupSchema = z.object({
   created_at: z.date(),
 });
 export type Group = z.infer<typeof groupSchema>;
+
 export const unsubscriberSchema = z.object({
   id: z.number(),
   client_id: z.string(),

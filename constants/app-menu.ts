@@ -103,7 +103,7 @@ export const menu = [
       { name: "Roles", path: "/system/roles" },
       { name: "Sms Gateways", path: "/system/sms-gateways" },
       // { name: "Subscribers", path: "/system/subscribers" },
-      { name: "settings", path: "/system/settings" },
+      { name: "Settings", path: "/system/settings" },
       { name: "Domains", path: "/system/domains" },
       { name: "Redeem Codes", path: "/system/redeem-codes" },
       { name: "Subscription Plans", path: "/system/subscription-plans" },

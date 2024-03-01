@@ -36,3 +36,10 @@
     </table>
   </div>
 </template>
+
+<script lang="ts" setup>
+  defineProps<{
+    countSentMessages?: number;
+    countPendingMessages?: number;
+  }>()
+</script>

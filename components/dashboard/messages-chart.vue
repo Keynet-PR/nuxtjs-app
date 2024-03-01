@@ -35,6 +35,11 @@
   import { useColorMode } from "@vueuse/core";
   import colors from "#tailwind-config/theme/colors";
 
+  defineProps<{
+    messages?: Object;
+    subscribers?: Object;
+  }>()
+
   ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend);
 
   const mode = useColorMode();

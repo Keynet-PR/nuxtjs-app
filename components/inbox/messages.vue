@@ -4,8 +4,8 @@
       <div class="flex-shrink-0">
         <div class="flex h-16 flex-col justify-center px-6">
           <div class="flex items-baseline space-x-3">
-            <h2 class="text-lg font-medium">Threads</h2>
-            <p class="text-sm font-medium">42 devices</p>
+            <h2 class="text-lg font-medium">Inbox</h2>
+            <p class="text-sm font-medium">42 messages</p>
           </div>
         </div>
         <div

@@ -11,7 +11,9 @@
           <button
             class="flex w-32 flex-col items-center rounded-l-md border border-r-0 bg-white p-2 focus:bg-green-200 focus:outline-none dark:bg-transparent"
           >
-            <p class="text-lg font-semibold">6</p>
+            <p class="text-lg font-semibold">
+              {{ countSentMessages }}
+            </p>
             <p class="text-sm uppercase text-gray-600">SENT</p>
           </button>
         </li>
@@ -19,7 +21,9 @@
           <button
             class="flex w-32 cursor-pointer flex-col items-center rounded-r-md border bg-white p-2 focus:bg-green-200 focus:outline-none dark:bg-transparent"
           >
-            <p class="text-lg font-semibold">23</p>
+            <p class="text-lg font-semibold">
+              {{ countPendingMessages }}
+            </p>
             <p class="text-sm uppercase text-gray-600">PENDING</p>
           </button>
         </li>
@@ -28,6 +32,11 @@
   </div>
 </template>
 
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+  defineProps<{
+    countSentMessages?: number;
+    countPendingMessages?: number;
+  }>()
+</script>
 
 <style></style>

@@ -36,6 +36,7 @@
   import { type Message } from "@/models/schema";
   import { Dialog, DialogTile, DialogContent } from "@/components/app/dialog";
   import MessageForm from "@/components/messages/form.vue";
+  
 
   interface DataTableToolbarProps {
     table: Table<Message>;
