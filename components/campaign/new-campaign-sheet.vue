@@ -33,9 +33,9 @@
           </draggable>
 
           <div>
-            <FieldArray v-slot="{ fields, push, remove }" name="message_ids">
-              <div v-for="(field, index) in fields" :key="`message_ids-${field.key}`">
-                <FormField v-slot="{ componentField }" :name="`message_ids[${index}].id`">
+            <FieldArray v-slot="{ fields, push, remove }" name="message_id">
+              <div v-for="(field, index) in fields" :key="`message_id-${field.key}`">
+                <FormField v-slot="{ componentField }" :name="`message_id[${index}].id`">
                   <FormItem>
                     <FormLabel :class="cn(index !== 0 && 'sr-only')">
                       Messages
@@ -265,7 +265,7 @@ const sender_id = ref<string>("RANDOM_SID");
 
 const form = ref({
   name: "Campiagn " + formatRelative(subDays(new Date(), 3), new Date()),
-  message_ids: latest_message.value,
+  message_id: latest_message.value,
   msg_rotation: "round_robin",
   sender_id: sender_id,
   rand_sid_len: 3,
@@ -284,7 +284,7 @@ const formSchema = toTypedSchema(
       .max(50, {
         message: "Campaign must not be longer than 30 characters.",
       }),
-    message_ids: z.array(
+    message_id: z.array(
       z.object({
         id: z.number(),
         name: z.string(),
@@ -324,7 +324,7 @@ const emit = defineEmits(["onSubmit", "onClose", "onSend"]);
 const onSubmit = handleSubmit((values) => {
   let form = {
     name: values.name,
-    message_ids: values.message_ids.map((message) => message.id),
+    message_id: values.message_id.map((message) => message.id),
     msg_rotation: values.msg_rotation,
     sender_id: values.sender_id,
     group_id: [values.group_id],
