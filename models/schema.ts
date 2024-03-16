@@ -4,16 +4,15 @@ export const dashboardSchema = z.object({
   countSentMessages: z.number(),
   countPendingMessages: z.number(),
   threads: z.object({}),
-  subscribers:z.object({}),
+  subscribers: z.object({}),
   messages: z.object({}),
-  linkedNumbers: z.object({})
+  linkedNumbers: z.object({}),
 });
 export type Dashboard = z.infer<typeof dashboardSchema>;
 
 export const groupSchema = z.object({
   id: z.number(),
   name: z.string(),
-  group_id: z.number(),
   contacts: z.number(),
   client: z.string(),
   created_at: z.date(),
@@ -78,6 +77,20 @@ export const messageSchema = z.object({
   created_at: z.date(),
 });
 export type Message = z.infer<typeof messageSchema>;
+
+export const campaignSchema = z.object({
+  id: z.number(),
+  name: z.string(),
+  message_id: z.array(z.object({})),
+  footer: z.string(),
+  group_id: z.array(z.object({})),
+  gateway_id: z.number(),
+  sender_id: z.string(),
+  rand_sid_len: z.number(),
+  seeding_number: z.string(),
+  seeding_every: z.number(),
+});
+export type Campaign = z.infer<typeof campaignSchema>;
 
 export const smsGatewaySchema = z.object({
   id: z.number(),
@@ -211,6 +224,13 @@ export const dnsRecordSchema = z.object({
   locked: z.boolean(),
 });
 export type DnsRecord = z.infer<typeof dnsRecordSchema>;
+
+export const BillingSchema = z.object({
+  current_balance: z.number(),
+  subscription: z.object({}),
+  paymentMethods: z.array(z.object({})),
+});
+export type Billing = z.infer<typeof BillingSchema>;
 
 export const redeemCodeSchema = z.object({
   id: z.number(),

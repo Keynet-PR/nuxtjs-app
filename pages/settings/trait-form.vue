@@ -75,6 +75,103 @@
         <FormMessage />
       </FormItem>
     </FormField>
+    <FormField v-slot="{ componentField, value }" name="dob">
+      <FormItem>
+        <FormLabel>Date of birth</FormLabel>
+        <Popover>
+          <PopoverTrigger as-child>
+            <FormControl>
+              <Button
+                variant="outline"
+                :class="
+                  cn(
+                    'w-[280px] pl-3 text-left font-normal',
+                    !value && 'text-muted-foreground'
+                  )
+                "
+              >
+                <span>{{ value ? format(value, "PPP") : "Pick a date" }}</span>
+                <RadixIconsCalendar class="ml-auto h-4 w-4 opacity-50" />
+              </Button>
+            </FormControl>
+          </PopoverTrigger>
+          <PopoverContent class="p-0">
+            <Calendar v-bind="componentField" />
+          </PopoverContent>
+        </Popover>
+        <FormDescription>
+          Your date of birth is used to calculate your age.
+        </FormDescription>
+        <FormMessage />
+      </FormItem>
+    </FormField>
+    <FormField v-slot="{ value }" name="language">
+      <FormItem>
+        <FormLabel>Language</FormLabel>
+        <Popover v-model:open="open">
+          <PopoverTrigger as-child>
+            <FormControl>
+              <Button
+                variant="outline"
+                role="combobox"
+                :aria-expanded="open"
+                :class="
+                  cn(
+                    'w-[200px] justify-between',
+                    !value && 'text-muted-foreground'
+                  )
+                "
+              >
+                {{
+                  value
+                    ? languages.find((language) => language.value === value)
+                        ?.label
+                    : "Select language..."
+                }}
+                <ChevronsUpDown class="ml-2 h-4 w-4 shrink-0 opacity-50" />
+              </Button>
+            </FormControl>
+          </PopoverTrigger>
+          <PopoverContent class="w-[200px] p-0">
+            <Command>
+              <CommandInput placeholder="Search language..." />
+              <CommandEmpty>No framework found.</CommandEmpty>
+              <CommandGroup>
+                <CommandItem
+                  v-for="language in languages"
+                  :key="language.value"
+                  :value="language.label"
+                  @select="
+                    () => {
+                      setValues({
+                        language: language.value,
+                      });
+                      open = false;
+                    }
+                  "
+                >
+                  <Check
+                    :class="
+                      cn(
+                        'mr-2 h-4 w-4',
+                        value === language.value ? 'opacity-100' : 'opacity-0'
+                      )
+                    "
+                  />
+                  {{ language.label }}
+                </CommandItem>
+              </CommandGroup>
+            </Command>
+          </PopoverContent>
+        </Popover>
+
+        <FormDescription>
+          This is the language that will be used in the dashboard.
+        </FormDescription>
+        <FormMessage />
+      </FormItem>
+    </FormField> 
+
     <div class="flex justify-start">
       <Button type="submit"> Update account </Button>
     </div>

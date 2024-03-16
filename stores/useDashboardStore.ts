@@ -8,6 +8,5 @@ export const useDashboardStore = defineStore("dashboard", () => {
     const { data } = await useApiFetch("/api/dashboard");
     dashboard.value = data.value as Dashboard;
   }
-
   return { dashboard, fetch };
 });

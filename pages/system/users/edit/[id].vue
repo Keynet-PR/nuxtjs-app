@@ -21,9 +21,7 @@
   const { breadcrumbs } = useBreadcrumbs();
   const id: number = useRoute().params.id;
 
-  await useAsyncData(() => modelStore.geItem(id), {
-    initialCache: false,
-  });
+  watchEffect(() => modelStore.geItem(id));
 
   const form = computed(() => modelStore.item);
   const onSubmitForm = async (form: User) => await modelStore.onUpdate(id, form);

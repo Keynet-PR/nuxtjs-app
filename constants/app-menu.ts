@@ -5,14 +5,19 @@ export const profileMenuOptions = [
     path: "/settings/profile",
   },
   {
-    name: "Billing",
-    icon: "heroicons:currency-dollar",
-    path: "/settings/billing",
-  },
-  {
     name: "Account",
     icon: "heroicons:cog-8-tooth",
     path: "/settings/account",
+  },
+  {
+    name: "Change Password",
+    icon: "heroicons:key",
+    path: "/settings/change-password",
+  },
+  {
+    name: "Billing",
+    icon: "heroicons:currency-dollar",
+    path: "/billing/overview",
   },
   { divider: true },
 ];
@@ -123,21 +128,21 @@ export const sidebarNavItems = [
     path: "/settings/account",
   },
   {
-    name: "Billing",
-    path: "/settings/billing",
+    name: "Change Password",
+    path: "/settings/change-password",
   },
-  {
-    name: "Appearance",
-    path: "/settings/appearance",
-  },
-  {
-    name: "Notifications",
-    path: "/settings/notifications",
-  },
-  {
-    name: "Display",
-    path: "/settings/display-form",
-  },
+  // {
+  //   name: "Appearance",
+  //   path: "/settings/appearance",
+  // },
+  // {
+  //   name: "Notifications",
+  //   path: "/settings/notifications",
+  // },
+  // {
+  //   name: "Display",
+  //   path: "/settings/display-form",
+  // },
 ];
 
 export const tabsReport = [

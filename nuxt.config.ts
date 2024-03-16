@@ -6,8 +6,10 @@ export default defineNuxtConfig({
     "@pinia/nuxt",
     "@nuxtjs/i18n",
     "nuxt-icon",
-    '@vueuse/nuxt',
+    "@vueuse/nuxt",
+    "@vee-validate/nuxt",
   ],
+  // plugins: ['@/plugins/sortable.ts'],
   tailwindcss: { exposeConfig: true },
   shadcn: {
     prefix: "",
@@ -46,16 +48,17 @@ export default defineNuxtConfig({
       apiProxyUrl: process.env.API_PROXY_URL,
     },
   },
+ 
   nitro: {
-    routeRules: {
-      "/api/**": {
-        proxy: "http://localhost:8000"
-      }
-    },
+    // routeRules: {
+    //   "/api/**": {
+    //     proxy: "http://localhost:8000"
+    //   }
+    // },
     preset: "node-server",
   },
-  devServer: {
-    port: 3000
-  },
+  // devServer: {
+  //   port: process.env.APP_PORT 
+  // },
   devtools: { enabled: false },
 });

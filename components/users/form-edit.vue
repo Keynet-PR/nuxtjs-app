@@ -1,4 +1,5 @@
 <template>
+  <div></div>
   <form class="space-y-8" @submit="onSubmit">
     <div class="grid grid-cols-2 gap-2">
       <FormField v-slot="{ componentField }" name="first_name" v-model="form.first_name">
@@ -145,7 +146,6 @@
   import { useForm } from "vee-validate";
   import { toTypedSchema } from "@vee-validate/zod";
   import { watchEffect, computed } from "vue";
-  import { useTraitFormStore } from "@/stores/useTraitFormStore";
   import { user_statuses } from "@/models/data";
 
   const emit = defineEmits(["onSubmitForm"]);
@@ -156,22 +156,16 @@
   const roles = computed(() => traitFormStore.roles);
 
 
-  defineProps({
-    isOpen: {
-      type: Boolean,
-      required: false,
-      default: false,
-    },
+  const { form } = defineProps({
     form: {
       type: Object,
       required: false,
       default: {},
-    },
+    }
   });
-
+  
   const formSchema = toTypedSchema(
-    z
-      .object({
+    z.object({
         first_name: z.string(),
         last_name: z.string(),
         username: z.string().optional().nullable(),
@@ -192,6 +186,7 @@
   );
   const { handleSubmit, resetForm } = useForm({
     validationSchema: formSchema,
+    initialValues: form.value
   });
   const onSubmit = handleSubmit((values) => {
     emit("onSubmitForm", values);

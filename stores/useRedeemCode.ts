@@ -24,6 +24,7 @@ export const useRedeemCode = defineStore("redeem-code-store", {
       const { data, error } = await useApiFetch("/api/billing/redeem-codes", {
         method: "POST",
         body: form,
+        pick: ['message']
       });
       if (!error.value) {
         await this.getItems();

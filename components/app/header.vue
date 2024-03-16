@@ -59,7 +59,7 @@
                 >
                   <Avatar class="h-9 w-9">
                     <AvatarImage
-                      src="https://github.com/radix-vue.png"
+                      :src="auth.user?.avatar_url"
                       alt="@{{ auth.user?.username }}"
                     />
                     <AvatarFallback>SC</AvatarFallback>
