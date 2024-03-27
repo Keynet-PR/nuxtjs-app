@@ -36,7 +36,7 @@ export const useTraitFormStore = defineStore("trait-form", {
         pick: ["data"],
       });
       this.messages = data.value?.data as Message[];
-      this.lastTwoMessages =  this.messages.slice(-2);
+      this.lastTwoMessages =  this.messages?.slice(-2) ?? [];
     },
     async getApiGateways() {
       const { data } = await useApiFetch("/api/api-gateway/gateways");
