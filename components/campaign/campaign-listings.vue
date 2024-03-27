@@ -24,6 +24,7 @@
       <nav aria-label="Message list" class="min-h-0 flex-1 overflow-y-auto">
         <ul role="list" class="divide-y border-b">
           <li
+            v-if="items.data"
             v-for="item in items?.data"
             :key="item.id"
             class="relative bg-white px-6 py-5 focus-within:ring-2 focus-within:ring-inset focus-within:ring-gray-100 hover:bg-gray-50 dark:bg-transparent"
@@ -59,6 +60,9 @@
               </div>
               <CheckupProgress :result="{}" />
             </div>
+          </li>
+          <li v-else class="px-4 text-sm">
+            No results.
           </li>
         </ul>
       </nav>
